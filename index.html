@@ -2,18 +2,21 @@
 <html ng-app="myModule">
 	<head>
 		<meta charset="UTF-8">
-		<script src="https://cdn.bootcss.com/angular.js/1.5.8/angular.js"></script>
-		<!--<link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">-->
-		<!--<script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>-->
-		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.js"></script>
+		<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
 		<link href="css/index.css" rel="stylesheet" />
 		<title>angular</title>
 	</head>
 	<body>
 		<div ng-controller="helloAngular">
-			{{greeting.text}}
+			{{date.text}}
+			<input type="text" ng-model="name"/>
+			{{name}}
+			<div ng-repeat="v in colors">	
+				{{v}}
+			</div>
 		</div>
-		
 	</body>
 </html>
 <script src="js/index.js"></script>
+

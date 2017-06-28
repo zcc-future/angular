@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.bootcss.com/angular.js/1.5.8/angular.js"></script>
+		<!--<link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">-->
+		<!--<script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>-->
+		<!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+		<link href="css/index.css" rel="stylesheet" />
+		<title>controller</title>
+	</head>
+	<body>
+		<div ng-controller="CommonController">
+			<div ng-controller="Controller1">
+				<p>{{greeting.text}},Angular</p>
+				<button ng-click="test1()">test1</button>
+			</div>
+			<div ng-controller="Controller1">
+				<p>{{greeting.text}},Angular</p>
+				<button ng-click="test2()">test2</button>
+				<button ng-click="commonFn()">通用</button>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
+<script>
+	function CommonController($scope){
+		$scope.commonFn=function(){
+			alert("这里是通用功能！")
+		};
+	}
+	function Controller1($scope){
+		$scope.greeting={
+			text:'Hello1'
+		};
+		$scope.greeting=function(){
+			alert("test1")
+		};
+	}
+	function Controller2($scope){
+		$scope.greeting={
+			text:'Hello2'
+		};
+		$scope.greeting=function(){
+			alert("test2")
+		};
+	}
+	
+</script>

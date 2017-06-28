@@ -1,10 +1,10 @@
-var myModule=angular.module('myModule',[]);
-	myModule.controller('helloAngular',['$scope',
-		function HelloAngular($scope){
-		$scope.greeting={
-			text:'hello'
+var app=angular.module('myModule',[]);
+	app.controller('helloAngular',['$scope',function($scope){
+		$scope.colors=["purple","green","blue","yellow","brown","red","orange"];
+		$scope.name='';
+		$scope.date={
+			text:"hello"
 		};
-	}
-
-	])
+	
+	}])
 
